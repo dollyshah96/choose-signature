@@ -1,0 +1,20 @@
+Name: <input type="text" [(ngModel)]="name"> <br> <br>
+Initial: <input type="text" [(ngModel)]="initial"> <br>
+
+
+<table *ngIf="name || initial" class="m-20">
+    <th>#</th>
+    <th>Name</th>
+    <th>Initial</th>
+    <tr *ngFor="let item of fontFamily" [ngStyle]="{'font-family': item.name}">
+        <td><input [(ngModel)]="currentFontFamily" [value]="item.name" type="radio" name="signature"></td>
+        <td>{{name}}</td>
+        <td>{{initial}}</td>
+    </tr>
+</table>
+
+<button class="m-20" [disabled]="!currentFontFamily" (click)="onCreate()">CREATE</button>
+<div class="m-20">
+    <img [src]="nameImg" alt="">
+    <img [src]="initialImg" alt="">
+</div>
