@@ -1,7 +1,7 @@
 Name: <input type="text" [(ngModel)]="name"> <br> <br>
 Initial: <input type="text" [(ngModel)]="initial"> <br>
 
-
+<canvas #sigPad hidden></canvas>
 <table *ngIf="name || initial" class="m-20">
     <th>#</th>
     <th>Name</th>
